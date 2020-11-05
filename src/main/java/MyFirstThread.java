@@ -2,8 +2,8 @@ import org.apache.log4j.Logger;
 
 public class MyFirstThread extends Thread {
     private static final int MAX_COUNT = 100;
-    private static final Logger logger = Logger.getLogger(MySecondThread.class);
-    private final Incrementer incrementer;
+    private static final Logger logger = Logger.getLogger(MyFirstThread.class);
+    private Incrementer incrementer;
 
     public MyFirstThread(Incrementer incrementer) {
         this.incrementer = incrementer;
