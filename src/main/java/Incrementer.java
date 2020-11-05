@@ -1,5 +1,6 @@
 public class Incrementer {
-    int value;
+    private static final int MAX_COUNT = 100;
+    private int value;
 
     public void increment(){
         value++;
@@ -11,5 +12,9 @@ public class Incrementer {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public static int getMaxCount() {
+        return MAX_COUNT;
     }
 }

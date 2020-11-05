@@ -1,9 +1,8 @@
 import org.apache.log4j.Logger;
 
 public class MyFirstThread extends Thread {
-    private static final int MAX_COUNT = 100;
     private static final Logger logger = Logger.getLogger(MyFirstThread.class);
-    private Incrementer incrementer;
+    private final Incrementer incrementer;
 
     public MyFirstThread(Incrementer incrementer) {
         this.incrementer = incrementer;
@@ -11,7 +10,7 @@ public class MyFirstThread extends Thread {
 
     @Override
     public void run() {
-        while (incrementer.getValue() != MAX_COUNT) {
+        while (incrementer.getValue() != Incrementer.getMaxCount()) {
             incrementer.increment();
             logger.info(currentThread().getName() + " " + incrementer.getValue());
         }
