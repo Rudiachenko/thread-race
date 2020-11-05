@@ -14,7 +14,7 @@ public class Incrementer {
         this.value = value;
     }
 
-    public static int getMaxCount() {
+    public int getMaxCount() {
         return MAX_COUNT;
     }
 }

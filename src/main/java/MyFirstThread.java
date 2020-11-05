@@ -10,7 +10,7 @@ public class MyFirstThread extends Thread {
 
     @Override
     public void run() {
-        while (incrementer.getValue() != Incrementer.getMaxCount()) {
+        while (incrementer.getValue() != incrementer.getMaxCount()) {
             incrementer.increment();
             logger.info(currentThread().getName() + " " + incrementer.getValue());
         }

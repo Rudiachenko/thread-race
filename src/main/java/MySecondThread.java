@@ -10,7 +10,7 @@ public class MySecondThread implements Runnable {
 
     @Override
     public void run() {
-        while (incrementer.getValue() != Incrementer.getMaxCount()){
+        while (incrementer.getValue() != incrementer.getMaxCount()){
             incrementer.increment();
             logger.info("Thread-1 " + incrementer.getValue());
         }
